@@ -108,6 +108,7 @@ nasdaq_view = CDSView(source=cds_dataset,
 
 nikkei_filter = [GroupFilter(column_name='Name', group='NIKKEI')]
 nikkei_view = CDSView(source=cds_dataset,
+                      filters=nikkei_filter)
                       
 #Mendefinisikan lingkaran atau circle yang akan dioutputkan
 circle_kwargs = {
