@@ -55,9 +55,6 @@ df_tubes_visdat=pd.read_csv('df_tubes_visdat_0291_4319.csv',parse_dates=['Date']
 df_tubes_visdat = df_tubes_visdat.rename(columns = {'Adj Close': 'AdjClose'}, inplace = False)
 df_tubes_visdat.sort_values(by ='Date')
 
-#mendrop kolom dengan nama kolom "Unnamed: 0"
-df_tubes_visdat.drop('Unnamed: 0', axis=1, inplace=True)
-
 #menambahkan kolom dengan nama kolom "Day_Perc_Change" dan diisikan dengan menggunakan fungsi bawaan pct_change() dari library python
 df_tubes_visdat['Day_Perc_Change'] = df_tubes_visdat['AdjClose'].pct_change()*100 
 
