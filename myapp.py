@@ -9,23 +9,44 @@ import numpy as np
 #insert dataset saham hangseng
 df_HS=pd.read_csv('Hang_Seng.csv')
 
+#output dataset saham hangseng
+df_HS
+
 #Tambahkan kolom nama dan kolomnya diisikan "HANG SENG"
 df_HS['Name'] = 'HANG SENG'
+
+#output dataset saham hangseng
+df_HS
 
 #insert dataset saham Nasdag 
 df_Nasdaq=pd.read_csv('Nasdaq.csv')
 
+#outputkan dataset saham Nasdag
+df_Nasdaq
+
 #Tambahkan kolom nama dan kolomnya diisikan "NASDAQ"
 df_Nasdaq['Name'] = 'NASDAQ'
+
+#outputkan dataset saham Nasdag
+df_Nasdaq
 
 #insert dataset saham Nikkei 
 df_Nikkei=pd.read_csv('Nikkei.csv')
 
+#Outputkan dataset saham Nikkei
+df_Nikkei
+
 #Tambahkan kolom nama dan kolomnya diisikan "NIKKEI"
 df_Nikkei['Name'] = 'NIKKEI'
 
+#Outputkan dataset saham Nikkei
+df_Nikkei
+
 #Gabungkan dasaset saham HANGSENG, NASDAQ, dan NIKKEI
 df_tubes_visdat = pd.concat([df_HS, df_Nasdaq, df_Nikkei])
+
+#Outputkan dataset final saham 
+df_tubes_visdat
 
 #insert dataset saham tubes visdat 
 df_tubes_visdat=pd.read_csv('df_tubes_visdat_0291_4319.csv',parse_dates=['Date'])
@@ -86,6 +107,7 @@ volume_fig = figure(x_axis_type='datetime',
            toolbar_location="below",
            tools=select_tools,
            x_axis_label='Date', y_axis_label='Volume')
+
 #membuat gambar plot Day Percentage Change dengan label Xnya dab label Ynya dengan nama berurutan adalah Date dan Day Percentage Change
 day_perc_change_fig = figure(x_axis_type='datetime',
            plot_height=700, plot_width=800,
