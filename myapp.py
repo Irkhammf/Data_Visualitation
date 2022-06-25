@@ -58,6 +58,9 @@ df_tubes_visdat.sort_values(by ='Date')
 #menambahkan kolom dengan nama kolom "Day_Perc_Change" dan diisikan dengan menggunakan fungsi bawaan pct_change() dari library python
 df_tubes_visdat['Day_Perc_Change'] = df_tubes_visdat['AdjClose'].pct_change()*100 
 
+#mendrop kolom dengan nama kolom "Unnamed: 0"
+df_tubes_visdat.drop('Unnamed: 0', axis=1, inplace=True)
+
 #menghapus kolom open karena tidak dibutuhkan
 df_tubes_visdat.drop( 'Open', axis=1, inplace=True)
 
